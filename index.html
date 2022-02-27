@@ -6,6 +6,9 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
 <style>
 body,p,h1,h2,h3,h4,h5,h6 {font-family: Palatino Linotype, sans-serif}
@@ -20,37 +23,56 @@ body, html {
   background-position: center;
   background-size: cover;
   background-image: url("./img/mit.jpg");
-  height: 30%;
-  /* max-height: 30%; */
+  height: 50%;
+  /* max-height: 50%; */
 }
 
 .team_member {
-    width: 20%; /* Change this so you can fit x Team members in a row*/
-    float: left;
-    padding: 0% 6px;
-    min-height: 500px;
+  float: left;
+  padding: 10px;
+  margin: 15px;
+  flex-grow: 1;
+  flex-basis: 0;
+  box-shadow: none;
 }
 .team_member p {
-  font-size: 10px;
-  font-size: 1.5vw;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5vmin;
+  text-align: center;
+  line-height: normal;
+  margin: 5% auto;
 }
 .team_member h4 {
-  font-size: 20px;
-  font-size: 3vw;
+  font-size: 3vmin;
+  font-family: 'Roboto', sans-serif;
+  text-transform: capitalize;
+  font-weight: bold;
+  text-align: center;
+  margin: 5% auto;
 }
-
+.email{
+  text-decoration: none;
+  font-size: 2vmin;
+  color: blue;
+  display: block;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
 .headshot {
     display: block;
     margin:auto;
-    max-width: 100%;
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    max-width: 200px;
     max-height: 200px;
+    object-fit: cover;
     overflow: hidden;
+    border-radius:50%;
 }
-
 .w3-bar .w3-button {
-  padding: 16px;
+  padding: 6px 16px;
+}
+.fa{
+  margin: 0px 3px;
 }
 </style>
 
@@ -59,12 +81,12 @@ body, html {
 <!-- MAKE SURE YOU GET THE RELATIVE PATHS RIGHT FOR THE NAV BAR!!!!-->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-card" id="myNavbar">
-    <a href="#home" class="w3-bar-item w3-button w3-wide">RSS Team TA</a>
+    <a href="#home" class="w3-bar-item w3-button w3-wide" id="titlePage"></a>
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
       <a href="#about" class="w3-bar-item w3-button">About</a>
       <a href="labs/" class="w3-bar-item w3-button"><i class="fa fa-folder"></i>Labs</a>
-      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="w3-bar-item w3-button"><i class="fa fa-camera"></i>Videos</a>
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="w3-bar-item w3-button"><i class="fa fa-video-camera"></i>Videos</a>
       <a href="https://github.com/mit-rss" class="w3-bar-item w3-button"><i class="fa fa-github-square"></i>Github</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
@@ -90,80 +112,95 @@ body, html {
 <!-- Header with full-height image -->
 <header class="title_img w3-display-container w3-grayscale-min" id="home">
   <div class="w3-display-bottommiddle w3-text-white w3-center">
-    <h1>Team TA!</h1>
+    <h1 id="teamTitle" style="font-weight: bold;"></h1>
     <p><a href="https://youtu.be/xLZU6TcSmRo" style="width:100%" class="w3-button w3-white w3-opacity w3-hover-opacity-off">
         Innovation starts somewhere, so why not let it start here?
     </a></p>
   </div>
 </header>
 
-<div class="w3-container w3-white" style="padding:5% 5%">
+<div class="w3-container w3-white" style="padding:1% 5%; display: flex; justify-content: space-around; flex-direction: row;">
   <div class="w3-card team_member">
       <img class="headshot" src="img/wall_e.jfif">
       <h4>Frank Gonzalez</h4>
-      <p>tbeaver@mit.edu</p>
+      <p style="font-weight: bold; margin: 0px; font-size: 2vmin;">Major: 16</p>
+      <a class="email">tbeaver@mit.edu</a>
       <p>These are some template bios; fill this in for each of your team members!
       </p>
   </div>
   <div class="w3-card team_member">
       <img class="headshot" src="img/r2.jpg">
       <h4>Marisa Hoosen</h4>
-      <p>tbeaver@mit.edu</p>
+      <p style="font-weight: bold; margin: 0px; font-size: 2vmin;">Major: 6-2</p>
+      <a class="email">tbeaver@mit.edu</a>
       <p>These are some template bios; fill this in for each of your team members!
       </p>
   </div>
   <div class="w3-card team_member">
       <img class="headshot" src="img/profile_pictures/toomas.jpg">
       <h4>Toomas Tennisberg</h4>
-      <p>toomas@mit.edu</p>
+      <p style="font-weight: bold; margin: 0px; font-size: 2vmin;">Major: 6-2</p>
+      <a class="email">toomas@mit.edu</a>
       <p>A 20 something year old Estonian who likes coding for the thrill of getting something to work. Is excited to work on this vehicle that is two orders of magnitude more expensive than they expected, and cannot wait to see what the little car can do.
       </p>
   </div>
   <div class="w3-card team_member">
       <img class="headshot" src="img/r2.jpg">
       <h4>Zoe Wong</h4>
-      <p>tbeaver@mit.edu</p>
+      <p style="font-weight: bold; margin: 0px; font-size: 2vmin;">Major: 6-2</p>
+      <a class="email">zoewong@mit.edu</a>
       <p>These are some template bios; fill this in for each of your team members!
       </p>
   </div>
   <div class="w3-card team_member">
       <img class="headshot" src="img/wall_e.jfif">
       <h4>Kaitlin Zareno</h4>
-      <p>tbeaver@mit.edu</p>
+      <p style="font-weight: bold; margin: 0px; font-size: 2vmin;">Major: 6-9</p>
+      <a class="email">tbeaver@mit.edu</a>
       <p>These are some template bios; fill this in for each of your team members!
       </p>
   </div>
 </div>
 
 <!-- Contact Section -->
+<!--
 <div class="w3-container w3-grey" style="padding:5% 5%;text-align:center;" id="about">
   <div class="w3-card w3-white" style="width:100%">
     <h1>About Us</h1>
   </div>
   <div class="w3-cell w3-red" style="width:30%;float:left;min-height: 200px;">
-      <i class="fa fa-folder"></i> <!--Put an image here or something?-->
+      <i class="fa fa-folder"></i>
       <p>Do something that is unique here. (You can change this to team values or something?)</p>
   </div>
   <div class="w3-cell w3-white" style="width:30%;margin-left:5%;float:left;min-height: 200px;">
-      <i class="fa fa-folder"></i><!--Put an image here or something?-->
+      <i class="fa fa-folder"></i>
       <p>The TAs are not that unique, so we are just writing a lot of filler things here so we look cool.</p>
   </div>
   <div class="w3-cell w3-blue" style="width:30%;margin-left:5%;float:left;min-height: 200px;">
-      <i class="fa fa-folder"></i><!--Put an image here or something?-->
+      <i class="fa fa-folder"></i>
       <p>Si vos es pulchellus frigus hanc: et admonitus in hoc genere digna est. It tristis et non dederint tibi. Benediximus</p>
   </div>
 </div>
+-->
 
 
 </body>
 
 <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+<footer class="w3-center w3-black w3-padding-16">
+  <!-- <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a> -->
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 </footer>
 
 <script>
+
+let teamName = 'RSS Team 4'
+
+document.getElementById("titlePage").innerHTML = teamName;
+document.getElementById("teamTitle").innerHTML = "6.141 " + teamName;
+
+Array.from(document.getElementsByClassName("email")).forEach(function (element) { element.href = "mailto:"+element.innerHTML;});
+
 // Modal Image Gallery
 function onClick(element) {
   document.getElementById("img01").src = element.src;
