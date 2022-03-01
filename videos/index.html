@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 <style>
-.lab{
+.video{
   float: left;
   padding: 10px;
   margin: 15px;
@@ -22,23 +22,23 @@
   /* justify-content: space-around;  */
   flex-direction: column;
 }
-.lab img{
+.video img{
   margin: 2%;
   max-width: 100%;
 }
-.lab h3{
+.video h3{
   font-size: 3vmin;
   font-weight: bold;
   margin:0px;
   font-family: 'Roboto', sans-serif;
 }
-.lab h4{
+.video h4{
   font-size: 2vmin;
   margin: 0px;
   font-style: italic;
   font-family: 'Roboto', sans-serif;
 }
-.lab p{
+.video p{
   font-size: 1.5vmin;
   margin: 5%;
   line-height: normal;
@@ -55,8 +55,8 @@
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
       <a href="../#about" class="w3-bar-item w3-button">About</a>
-      <a href="#labs" class="w3-bar-item w3-button"><i class="fa fa-folder"></i>Labs</a>
-      <a href="../videos/" class="w3-bar-item w3-button"><i class="fa fa-video-camera"></i>Videos</a>
+      <a href="../labs/" class="w3-bar-item w3-button"><i class="fa fa-folder"></i>Labs</a>
+      <a href="#videos" class="w3-bar-item w3-button"><i class="fa fa-video-camera"></i>Videos</a>
       <a href="https://github.com/rss2022-4" class="w3-bar-item w3-button"><i class="fa fa-github-square"></i>Github</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
@@ -72,35 +72,36 @@
 <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close X</a>
   <a href="../#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
-  <a href="#labs" onclick="w3_close()" class="w3-bar-item w3-button">Labs</a>
-  <a href="../videos/" onclick="w3_close()" class="w3-bar-item w3-button">Videos</a>
+  <a href="../labs/" onclick="w3_close()" class="w3-bar-item w3-button">Labs</a>
+  <a href="#videos" onclick="w3_close()" class="w3-bar-item w3-button">Videos</a>
   <a href="https://github.com/rss2022-4" onclick="w3_close()" class="w3-bar-item w3-button">Github</a>
 </nav>
 
 <header class="title_img w3-display-container w3-grayscale-min">
   <div class="w3-display-bottommiddle w3-text-white w3-center">
   <!-- <div class="w3-container w3-row-padding" style="margin: 39px 0px 0px 0px; padding: 1%;"> -->
-    <h1 class="w3-center">6.141 RSS LABS</h1>
+    <h1 class="w3-center">6.141 RSS VIDEOS</h1>
     <p class="w3-center" style="font-weight:bold">What we've done for Robotics: Science and Systems</p>
   <!-- </div> -->
   </div>
 </header>
   <!-- End of repeated content on each page-->
 
-  <!-- Lab Sections -->
-  <div class="w3-row-padding w3-white" style="padding:1% 5%; display: flex; justify-content: space-around; flex-direction: row;" id="labs">
-    <!-- Lab 3 -->
-      <div class="w3-card w3-center lab">
-        <img src="img/charles.jpg" alt="Survival" onclick="onClick(this)"> <!-- class="w3-hover-opacity"-->
+  <!-- video Sections -->
+  <div class="w3-row-padding w3-white" style="padding:1% 5%; display: flex; justify-content: space-around; flex-direction: row;">
+    <!-- Example video -->
+      <!--  <div class="w3-card w3-center video">
+      <img src="img/charles.jpg" alt="Survival" onclick="onClick(this)">
         <div class="w3-container" style="margin-top:auto">
-          <h3>Lab 3</h3>
+          <h3>video 3</h3>
           <h4>Wall Follower on the Racecar</h4>
-          <!-- <p>Example of rendering html and embedding your presentation and report pdf.</p> -->
+          <p>Example of rendering html and embedding your presentation and report pdf.</p>
           <p><a href="lab3/"><button class="w3-button w3-light-grey w3-block"><i class="fa fa-info-circle"></i> More info</button></a></p>
         </div>
+        </div> -->
       </div>
   </div>
-  <!-- end the lab section -->
+  <!-- end the video section -->
 
 </body>
 
