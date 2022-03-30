@@ -26,7 +26,7 @@
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
       <a href="../../#about" class="w3-bar-item w3-button">About</a>
-      <a href="../labs/#labs" class="w3-bar-item w3-button"><i class="fa fa-folder"></i>Labs</a>
+      <a href="../#labs" class="w3-bar-item w3-button"><i class="fa fa-folder"></i>Labs</a>
       <a href="../../videos/#videos" class="w3-bar-item w3-button"><i class="fa fa-video-camera"></i>Videos</a>
       <a href="https://github.com/rss2022-4" class="w3-bar-item w3-button"><i class="fa fa-github-square"></i>Github</a>
     </div>
@@ -42,7 +42,7 @@
 <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close X</a>
   <a href="../../#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
-  <a href="../labs/#labs" onclick="w3_close()" class="w3-bar-item w3-button">Labs</a>
+  <a href="../#labs" onclick="w3_close()" class="w3-bar-item w3-button">Labs</a>
   <a href="../../videos/#videos" onclick="w3_close()" class="w3-bar-item w3-button">Videos</a>
   <a href="https://github.com/rss2022-4" onclick="w3_close()" class="w3-bar-item w3-button">Github</a>
 </nav>
@@ -134,14 +134,14 @@ if (labNum-1 < minLabNum){
   prevLabButton.innerHTML = "Lab Home";
   prevLabButton.href = "../#labs";
 } else {
-  prevLabButton.href = "../lab" + (labNum-1);
+  prevLabButton.href = "../lab" + (labNum-1) + "/";
 }
 
 nextLabButton = document.getElementById("nextLab");
 if (labNum + 1 > maxLabNum){
   nextLabButton.remove();
 } else {
-  nextLabButton.href = "../lab" + (labNum+1);
+  nextLabButton.href = "../lab" + (labNum+1) + "/";
 }
 
 </script>
