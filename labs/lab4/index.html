@@ -130,7 +130,7 @@ document.getElementById("reportObject").data = reportPath + "#view=FitW";
 document.getElementById("reportRender").src = reportPath;
 
 prevLabButton = document.getElementById("prevLab");
-if (labNum-1 < minLabNum){
+if (labNum == minLabNum){
   prevLabButton.innerHTML = "Lab Home";
   prevLabButton.href = "../#labs";
 } else {
@@ -138,7 +138,7 @@ if (labNum-1 < minLabNum){
 }
 
 nextLabButton = document.getElementById("nextLab");
-if (labNum + 1 > maxLabNum){
+if (labNum == maxLabNum){
   nextLabButton.remove();
 } else {
   nextLabButton.href = "../lab" + (labNum+1) + "/";
