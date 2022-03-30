@@ -132,16 +132,16 @@ document.getElementById("reportRender").src = reportPath;
 prevLabButton = document.getElementById("prevLab");
 if (labNum-1 < minLabNum){
   prevLabButton.innerHTML = "Lab Home";
-  prevLabButton.href = "../labs/#labs";
+  prevLabButton.href = "../#labs";
 } else {
-  prevLabButton.href = "../labs/lab" + (labNum-1);
+  prevLabButton.href = "../lab" + (labNum-1);
 }
 
 nextLabButton = document.getElementById("nextLab");
 if (labNum + 1 > maxLabNum){
   nextLabButton.remove();
 } else {
-  nextLabButton.href = "../labs/lab" + (labNum+1);
+  nextLabButton.href = "../lab" + (labNum+1);
 }
 
 </script>
