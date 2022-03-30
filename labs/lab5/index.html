@@ -134,13 +134,16 @@ if (labNum == minLabNum){
   prevLabButton.innerHTML = "Lab Home";
   prevLabButton.href = "../#labs";
 } else {
+  console.log("../lab" + (labNum-1) + "/");
   prevLabButton.href = "../lab" + (labNum-1) + "/";
 }
 
 nextLabButton = document.getElementById("nextLab");
+console.log(labNum == maxLabNum);
 if (labNum == maxLabNum){
   nextLabButton.remove();
 } else {
+  console.log("../lab" + (labNum+1) + "/");
   nextLabButton.href = "../lab" + (labNum+1) + "/";
 }
 
